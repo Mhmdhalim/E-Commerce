@@ -26,7 +26,7 @@ const NavBar = (props) => {
           <p
             className={` text-sm bg-white text-black 
               
-              w-full sm:text-[16px] text-[13px] font-bold text-center whitespace-nowrap`}
+              w-full sm:text-[16px] text-[13px] font-bold text-center whitespace-nowrap p-1`}
           >
             🛍️ Huge Discounts on Clothes! | 💻 Up to 30% off Electronics! | 💎
             Exclusive Jewelry Collections Available Now!

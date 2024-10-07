@@ -87,7 +87,6 @@ nav .nav-link:hover {
 
 @media (max-width: 400px) {
   .main {
-    background-position: left;
     height: screen;
   }
   .img3, .img4 {
