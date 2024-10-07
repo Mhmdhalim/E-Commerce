@@ -96,10 +96,14 @@ nav {
     background-position: center;
     background-size: cover;
     height: 800px;
+    
 }
+
 @media (max-width:400px){
     .main{
-        height: screen;
+      background-position: left;
+        height: 400px;
+
     }
     .img3, .img4{
         display: none;
@@ -189,14 +193,6 @@ nav {
         position: absolute;
         top: 48px;
         left: 12px;
-        p{
-            width: 175px;
-            font-size: 8px;
-            margin-bottom: 5px;
-            span{
-                font-size: 14px;
-            }
-        }
     }
     .video_btn{
         font-size: 10px;

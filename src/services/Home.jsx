@@ -182,9 +182,9 @@ const Home = () => {
           </div>
         </div>
         {/* VIDEO */}
-        <div className="bg-white w-full p-1 flex justify-center items-center align-middle relative z-0">
+        <div className="bg-white w-full p-1 flex justify-center items-center align-middle relative z-0 overflow-hidden">
           <video loop autoPlay muted src={homeVideo}></video>
-          <div className="P_video flex flex-col p-5 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
+          <div className="flex flex-col p-5 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
             <div className="lg:text-xl sm:w-[500px] lg:w-[500px] mb-0 lg:mb-6">
               <span className="w-full lg:text-4xl text-xl font-bold my-0 lg:my-5">
                 Mousa Exclusive Collection
