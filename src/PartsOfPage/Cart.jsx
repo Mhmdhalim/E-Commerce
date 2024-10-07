@@ -54,7 +54,7 @@ const Cart = () => {
 const CartPDF = () => (
     <Document>
         <Page style={styles.page}>
-            <Text style={styles.header}>Mousa</Text>
+            <Text style={styles.header}>Store</Text>
             <Text style={{fontSize: 14, textAlign: 'center', marginBottom:15}}>Mansoura - In front of Al Jazira Club</Text>
             {/* Professional Introduction */}
             <Text style={{ fontSize: 14, marginBottom: 10, textAlign: 'justify' }}>

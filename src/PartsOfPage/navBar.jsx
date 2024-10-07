@@ -157,6 +157,15 @@ const NavBar = (props) => {
                 </li>
                 <li className="my-2">
                   <Link
+                    to="/cart"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
+                    onClick={toggleMenu}
+                  >
+                    Cart
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link
                     to="/about"
                     className="uppercase font-bold hover:text-gray-600 text-xl"
                     onClick={toggleMenu}
