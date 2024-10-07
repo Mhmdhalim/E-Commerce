@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Overpass", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body {
+  background-color: #ffffff; /* Set body background to white */
+  color: #000000; /* Set default text color to black */
+  font-family: "Poppins", sans-serif;
+}
+
+/* NavBar */
+.headnav {
+  position: relative;
+  font-family: "EB Garamond", serif;
+  font-weight: 800;
+}
+.headnav span {
+  font-family: "EB Garamond", serif;
+  font-weight: 800;
+}
+.headnav .emoji {
+  display: inline-block;
+  animation: walk 2s ease infinite;
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px); /* Moves the emoji 10px to the right */
+  }
+  100% {
+    transform: translateX(0); /* Returns to original position */
+  }
+}
+nav {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 1000;
+}
+nav .nav-link {
+  transition: color 0.3s ease;
+}
+nav .nav-link:hover {
+  color: #555555; /* Set a darker gray color for hover effect */
+}
+
+/* Ticker scrolling effect */
+.ticker {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.ticker-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 18s linear infinite;
+}
+
+/* Keyframe animation for the scrolling effect */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.main {
+  background-image: url("../assets/aa.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+}
+
+@media (max-width: 400px) {
+  .main {
+    height: screen;
+  }
+  .img3, .img4 {
+    display: none;
+  }
+}
+.head_best_seller {
+  font-family: "Overpass", sans-serif;
+}
+
+.product {
+  position: relative;
+}
+.product .best_img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.product .best_img:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.product .best_img:hover ~ .button_card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.product .button_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product .button_card button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.product .button_card button:hover {
+  background-color: #f1f1f1;
+}
+.product .liked {
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .best_seller_all {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .best_seller_all .product {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px;
+  }
+  .P_video {
+    position: absolute;
+    top: 48px;
+    left: 12px;
+  }
+  .P_video p {
+    width: 175px;
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+  .P_video p span {
+    font-size: 14px;
+  }
+  .video_btn {
+    font-size: 10px;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container .product-list {
+  display: flex;
+  transition: transform 2s ease-in-out;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+.carousel-container .product {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+.carousel-container .product.slide-in-left {
+  animation: slideInFromLeft 2s forwards;
+}
+.carousel-container .product.slide-in-right {
+  animation: slideInFromRight 2s forwards;
+}
+.carousel-container .product.slide-out-left {
+  animation: slideOutToLeft 2s forwards;
+}
+.carousel-container .product.slide-out-right {
+  animation: slideOutToRight 2s forwards;
+}
+.carousel-container .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-container .button.prev {
+  left: 10px;
+}
+.carousel-container .button.next {
+  right: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 400px) {
+  footer {
+    flex-direction: column;
+  }
+}
+.first_images {
+  display: flex;
+  width: 100%;
+}
+.first_images .small_screen {
+  display: none;
+}
+.first_images .big_screen {
+  display: flex;
+  gap: 5px;
+  padding-top: 20px;
+}
+.first_images img {
+  width: 25%;
+}
+
+@media (max-width: 500px) {
+  .best_seller {
+    padding: 0px;
+  }
+  .first_images {
+    display: flex;
+    width: 100%;
+  }
+  .first_images .small_screen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .first_images .small_screen div {
+    display: flex;
+    gap: 5px;
+  }
+  .first_images .big_screen {
+    display: none;
+  }
+  .first_images img {
+    width: 50%;
+  }
+}
+.best_seller {
+  padding: 20px;
+}
+
+@media (max-width: 400px) {
+  .ticker-content {
+    background-color: white;
+    color: #000000;
+  }
+  .ticker-content p {
+    background-color: white;
+    color: #000000;
+  }
+  .ticker {
+    background-color: white;
+    color: #000000;
+  }
+  nav {
+    background-color: white;
+    color: #000000;
+  }
+  nav .mousa_small {
+    background-color: white;
+    color: #000000;
+  }
+}
+.product {
+  position: relative;
+  padding: 1.25rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product .relative {
+  position: relative;
+}
+.product .best_im {
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.product .best_im.group:hover .product .best_im {
+  transform: scale(1.1);
+}
+.product .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.product:hover .product .overlay {
+  opacity: 1;
+}
+.product .button {
+  width: 7rem;
+  background-color: white;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+.product .button:hover {
+  background-color: blue;
+  color: white;
+}
+.product h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.product p {
+  font-size: 0.875rem;
+}
+
+.hover_img {
+  transition: all 1s ease;
+}
+
+.hover_img:hover {
+  transform: scale(0.5);
+  background-color: #000000;
+  opacity: 0.5;
+}/*# sourceMappingURL=main.css.map */
