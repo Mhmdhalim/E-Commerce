@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { CartContext } from './cartContext';
-import NavBar from '../component/navBar';
-import Footer from '../component/Footer';
+import NavBar from '../PartsOfPage/navBar';
+import Footer from '../PartsOfPage/Footer';
 
 const CardPage = () => {
     const location = useLocation();

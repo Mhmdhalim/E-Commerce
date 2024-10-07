@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useWishList } from "../product/wishListContext"; // <-- Import this
+import axios from "axios";
 
-import { Api } from "../Api/Api";
-import NavBar from "../component/navBar";
-import Footer from "../component/Footer";
-import Loading from "../product/Loading";
-import Error from "../product/Error";
+import NavBar from "../PartsOfPage/navBar";
+import Footer from "../PartsOfPage/Footer";
+import Status from "../FunctionOfProducts/Status";
+
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
 
 import homeVideo from "../assets/homeVideo.mp4";
-import AddToCartButton from "../product/AddToCartButton";
+import AddToCartButton from "../FunctionOfProducts/AddToCartButton";
 
 const Home = () => {
   const [all, setAll] = useState([]);
@@ -24,13 +23,12 @@ const Home = () => {
   const [slideDirection, setSlideDirection] = useState(null);
   const bg_status = false;
   const itemsPerSlide = window.innerWidth > 1000 ? 3 : 1;
-  const { addToWishList, wishListItems } = useWishList(); // <-- Use wishlist context
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await Api("https://fakestoreapi.com/products");
-        setAll(data);
+        const response = await axios.get("https://fakestoreapi.com/products");
+        setAll(response.data);
       } catch (error) {
         setError("Failed to fetch products");
       } finally {
@@ -40,16 +38,12 @@ const Home = () => {
 
     fetchData();
   }, []);
-  console.log(all)
+  console.log(all);
   const handleHeartClick = (product, index) => {
     setLiked((prevLiked) => ({
       ...prevLiked,
       [index]: !prevLiked[index],
     }));
-
-    if (!wishListItems.some((item) => item.id === product.id)) {
-      addToWishList(product); // <-- Add product to wishlist
-    }
   };
 
   const navigate = useNavigate();
@@ -83,8 +77,8 @@ const Home = () => {
       setCurrentIndex(all.length - itemsPerSlide);
     }
   };
-  if (loading) return <Loading loading={loading}/>;
-  if (error) return <Error error={error}/>
+
+    <Status loading={loading} error={error} />;
 
   return (
     <>
@@ -105,7 +99,7 @@ const Home = () => {
           </Link>
         </section>
       </div>
-  
+
       {/* Fixed Imgaes */}
       <div className="flex flex-wrap">
         <div className="first_images flex justify-center p-0 items-center w-full overflow-hidden">
@@ -131,23 +125,23 @@ const Home = () => {
           <h1 className="p-10 px-2 head_best_seller uppercase sm:text-5xl text-2xl font-extrabold">
             Best Seller
           </h1>
-          <div className="sm:p-10 best_seller_all flex flex-col lg:flex-row  justify-center items-center gap-10">
+          <div className="sm:p-10 best_seller_all flex flex-wrap flex-row  justify-center items-center gap-10">
             {all
               .filter(
                 (_, index) =>
-                  index === 1 || index === 3 || index === 2 || index === 4
+                  index === 3 || index === 2 || index === 4
               )
               .map((product, index) => (
                 <div
                   key={index}
-                  className="font-bold p-5 product lg:w-1/4 flex flex-col justify-between gap-4 group"
+                  className="font-bold p-5 product flex flex-col justify-between gap-4 group"
                 >
                   <div className="relative">
                     <div className="best_img h-96 flex justify-center w-full items-center cursor-pointer relative  group">
                       <img
                         src={product.image}
                         alt="Your Alt Text"
-                        className="w-full h-full  transform transition-transform duration-300 ease-in-out"
+                        className="w-full h-full transform transition-transform duration-300 ease-in-out"
                       />
                       <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                     </div>
@@ -311,7 +305,7 @@ const Home = () => {
         </div>
 
         {/* FOOTER */}
-          <Footer />
+        <Footer />
       </div>
     </>
   );

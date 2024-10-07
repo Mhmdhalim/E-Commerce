@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { CartContext } from './cartContext';
+import { CartContext } from '../FunctionOfProducts/cartContext';
 import { PDFDownloadLink, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import NavBar from '../component/navBar';
-import Footer from '../component/Footer';
+import NavBar from "../PartsOfPage/navBar";
+import Footer from "../PartsOfPage/Footer";
 
 const Cart = () => {
     const { cart, setCart } = useContext(CartContext);

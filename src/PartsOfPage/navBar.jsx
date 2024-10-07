@@ -6,7 +6,7 @@ import {
   faBars,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import { useCart } from "../product/cartContext";
+import { useCart } from "../FunctionOfProducts/cartContext";
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false); // State to handle menu open/close
@@ -15,7 +15,6 @@ const NavBar = (props) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen); // Toggle the menu state
   };
-  
 
   return (
     <div>
@@ -39,9 +38,7 @@ const NavBar = (props) => {
         className={`p-3 sm:h-16 py-0 transition-all duration-300 text-sm bg-white text-black`} // Background changes on scroll
       >
         <div className="sm:p-3 p-2 px-6 container mx-auto flex justify-between items-center align-middle">
-          <div
-            className="hidden lg:flex gap-3 uppercase justify-center items-center text-sm bg-white text-black"
-          >
+          <div className="hidden lg:flex gap-3 uppercase justify-center items-center text-sm bg-white text-black">
             <Link
               to="/store"
               className={` text-xl font-bold bg-white text-black`}
@@ -82,8 +79,14 @@ const NavBar = (props) => {
             <Link to="/about" className={` text-sm bg-white text-black`}>
               About
             </Link>
-            <Link to="/cart" className="flex flex-col items-center justify-center text-xl bg-white text-black relative">
-              <FontAwesomeIcon icon={faBagShopping} className="text-[40px] pr-0" />
+            <Link
+              to="/cart"
+              className="flex flex-col items-center justify-center text-xl bg-white text-black relative"
+            >
+              <FontAwesomeIcon
+                icon={faBagShopping}
+                className="text-[40px] pr-0"
+              />
               {cartCount > 0 && (
                 <span className="absolute top-5 right-2 bg-white text-black text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {cartCount}

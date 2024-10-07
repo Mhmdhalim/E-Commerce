@@ -1,11 +1,11 @@
 import React, { createContext } from "react";
-import NavBar from "../component/navBar";
-import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
+import NavBar from "../PartsOfPage/navBar";
+import Footer from "../PartsOfPage/Footer";
 
 export const StoreContext = createContext();
     
-const Store = () => {
+const Contact = () => {
 
     const bg_status = false;
     return (
@@ -33,12 +33,12 @@ const Store = () => {
                             <div className="bg-white p-6  shadow-lg rounded-lg">
                                     <h3 className="text-4xl font-bold text-center mb-8">Contact Us</h3>
                                     <p className="text-gray-700 mb-6">
-                                        We'd love to hear from you! Please reach out to us via the form or the contact information below.
+                                        We'd love to hear from you! Please reach out to us via <br /> the form or the contact information below.
                                     </p>
 
                                     <div className="mb-4">
                                         <h4 className="text-xl font-bold">Phone:</h4>
-                                     <p className="text-gray-700">Call us at <a href="tel:+1234567890" className="text-blue-500">+1 (234) 567-890</a></p>
+                                        <p className="text-gray-700">Call us at <a href="tel:+1234567890" className="text-blue-500">+1 (234) 567-890</a></p>
                                     </div>
 
                                     <div className="mb-4">
@@ -61,4 +61,4 @@ const Store = () => {
     );
 };
 
-export default Store;
+export default Contact;

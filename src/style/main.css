@@ -87,6 +87,7 @@ nav .nav-link:hover {
 
 @media (max-width: 400px) {
   .main {
+    background-position: left;
     height: screen;
   }
   .img3, .img4 {
@@ -144,7 +145,7 @@ nav .nav-link:hover {
   cursor: pointer;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 750px) {
   .best_seller_all {
     display: flex;
     flex-direction: column;
@@ -160,14 +161,6 @@ nav .nav-link:hover {
     position: absolute;
     top: 48px;
     left: 12px;
-  }
-  .P_video p {
-    width: 175px;
-    font-size: 8px;
-    margin-bottom: 5px;
-  }
-  .P_video p span {
-    font-size: 14px;
   }
   .video_btn {
     font-size: 10px;
