@@ -11,9 +11,9 @@ const Footer = () => {
                 <div className='mr-0 gap-2 p-5 px-2 h-72 w-full bg-white'>
                     <div className='sm:px-10 px-5  bg-black h-full flex justify-between items-center'>
                         <p className='text-4xl font-bold text-white w-[450px] tracking-wide leading-6'>
-                            <span className='mb-4 text-4xl font-bold text-white inline-block'>Sign up to our newsletter</span> <br /> & get 20% Off
+                            <span className='mb-4 font-bold sm:text-4xl text-2xl text-white inline-block'>Sign up to our newsletter</span> <br /> <span className='sm:text-4xl text-2xl'>& get 20% Off</span>
                         </p>
-                        <button class="sm:ml-0 ml-4 bg-white text-center text-gray-800 text-3xl font-bold py-4 px-8 border-y-4 sm:border-r-0 border-r-4 border-black ">
+                        <button class="sm:ml-0 ml-4 bg-white text-center text-gray-800 sm:text-3xl text-2xl font-bold py-4 px-8 border-y-4 sm:border-r-0 border-r-4 border-black ">
                             SIGN UP FOR FREE
                         </button>
                     </div>
