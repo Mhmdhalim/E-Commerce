@@ -462,3 +462,33 @@ footer{
   background-color: #000000;
   opacity: .5;
 }
+.logo-container {
+  height: 24rem; // 96 * 0.25rem (same as h-96 in Tailwind)
+  padding: 1.5rem; // 6 * 0.25rem
+  display: flex;
+  align-items: center;
+  justify-content: start; // Aligns images at the start
+  overflow: hidden;
+  position: relative;
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem; // Adjusts space between images
+    animation: move-left 10s linear infinite;
+  }
+
+  .logo {
+    width: 10rem; // Control the width of the images
+    height: auto;
+  }
+
+  @keyframes move-left {
+    0% {
+      transform: translateX(150%); // Start at normal position
+    }
+    100% {
+      transform: translateX(-100%); // Move to the left out of view
+    }
+  }
+}

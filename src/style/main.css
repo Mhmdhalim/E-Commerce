@@ -395,4 +395,32 @@ footer {
   transform: scale(0.5);
   background-color: #000000;
   opacity: 0.5;
+}
+
+.logo-container {
+  height: 24rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  position: relative;
+}
+.logo-container .slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  animation: move-left 10s linear infinite;
+}
+.logo-container .logo {
+  width: 10rem;
+  height: auto;
+}
+@keyframes move-left {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=main.css.map */

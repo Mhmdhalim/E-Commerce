@@ -10,6 +10,10 @@ import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
+import img6 from "../assets/logo/img6.png"
+import img7 from "../assets/logo/img7.png"
+import img8 from "../assets/logo/img8.png"
+import img9 from "../assets/logo/img9.png"
 
 import homeVideo from "../assets/homeVideo.mp4";
 import AddToCartButton from "../FunctionOfProducts/AddToCartButton";
@@ -99,6 +103,15 @@ const Home = () => {
           </Link>
         </section>
       </div>
+      {/* Logo */}
+      <div className="logo-container">
+        <div className="slider">
+          <img src={img6} className="logo" alt="" />
+          <img src={img7} className="logo" alt="" />
+          <img src={img8} className="logo" alt="" />
+          <img src={img9} className="logo" alt="" />
+        </div>
+      </div>
 
       {/* Fixed Imgaes */}
       <div className="flex flex-wrap">
@@ -127,10 +140,7 @@ const Home = () => {
           </h1>
           <div className="sm:p-10 best_seller_all flex flex-wrap flex-row  justify-center items-center gap-10">
             {all
-              .filter(
-                (_, index) =>
-                  index === 3 || index === 2 || index === 4
-              )
+              .filter((_, index) => index === 3 || index === 2 || index === 4)
               .map((product, index) => (
                 <div
                   key={index}
