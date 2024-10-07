@@ -76,7 +76,7 @@ const Store = () => {
                 {/* PRODUCTS */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-20 w-full">
                     {all.slice(0, visibleProducts).map((product, index) => (
-                        <div key={index} className="relative p-5 product font-bold group">
+                        <div key={index} className="relative p-5 w-full product font-bold group">
                             <div className="relative">
                                 <div className="best_img h-96 p-2 flex justify-center items-center cursor-pointer relative  group">
                                     <img

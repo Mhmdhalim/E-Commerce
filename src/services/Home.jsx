@@ -88,7 +88,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="main relative">
+      <div className="main relative mb-4">
         <header>
           <NavBar bg={bg_status} home={"home"} />
         </header>

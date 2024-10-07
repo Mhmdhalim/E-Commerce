@@ -68,14 +68,14 @@ const Furniture = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 5l7 7-7 7" />
                         </svg>
-                        <Link to="/jewelery" className="sm:text-2xl  text-xl text-blue-600">Furniture</Link>    
+                        <Link to="/jewelery" className="sm:text-2xl text-xl text-blue-600">Furniture</Link>    
                     </div>
                 </div>
 
                 {/* PRODUCTS */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-20 w-full">
                     {all.slice(0, visibleProducts).map((product, index) => (
-                        <div key={index} className="relative p-5 product font-bold group">
+                        <div key={index} className="relative p-5 product w-full font-bold group">
                             <div className="relative">
                                 <div className="best_img h-96 p-2 flex justify-center items-center cursor-pointer relative  group">
                                     <img
