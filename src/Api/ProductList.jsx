@@ -5,6 +5,10 @@ import axios from "axios"; // Import axios for API call
 import AddToCartButton from "../FunctionOfProducts/AddToCartButton"; // Your AddToCartButton component
 import Status from "../FunctionOfProducts/Status";
 
+import apifurniture from "./furniture.json"
+import apicloths from "./clothes.json"
+import apirandom from "./random.json"
+
 export const StoreContext = createContext();
 
 const ProductList = (props) => {
@@ -17,8 +21,22 @@ const ProductList = (props) => {
   // API call function
     const fetchProducts = async () => {
         try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        setAll(response.data); // Set the fetched data to all products
+            if(props.service === 'furniture')
+            {
+                setAll(apifurniture)
+            }
+            else if (props.service === 'men' || props.service === 'women'){
+                setAll(apicloths)
+            }
+            else if (props.service === 'shop')
+            {
+                setAll(apirandom)
+            }
+            else {
+                const response = await axios.get( "https://fakestoreapi.com/products");
+                setAll(response.data); // Set the fetched data to all products
+            }
+        
         } catch (error) {
         setError("Failed to fetch products"); // Handle errors
         } finally {
@@ -29,6 +47,16 @@ const ProductList = (props) => {
     useEffect(() => {
         fetchProducts(); // Fetch products on component mount
     }, []);
+
+    // Helper function to dynamically import images
+    const importImage = (path) => {
+        try {
+            return require(`${path}`);
+        } catch (err) {
+            console.error("Image not found:", path);
+            return null;
+        }
+    };
 
     // Function to load more products
     const loadMoreProducts = () => {
@@ -83,48 +111,52 @@ const ProductList = (props) => {
             </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-20 w-full">
-            {all.slice(0, visibleProducts).map((product, index) => (
-            <div
-                key={index}
-                className="relative p-5 w-full product font-bold group"
-            >
-                <div className="relative">
-                <div className="best_img h-96 p-2 flex justify-center items-center cursor-pointer relative group">
-                    <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full transform transition-transform duration-300 ease-in-out"
-                    />
-                    <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
-                </div>
-                </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                <AddToCartButton item={product} />
-                <button
-                    className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
-                    onClick={() => handleViewDetails(product)}
-                >
-                    View Details
-                </button>
-                </div>
-                <div className="mt-4">
-                <div className="cursor-pointer flex justify-between mb-2">
-                    <span
-                    className="cursor-pointer text-2xl hover:scale-110 text-black"
-                    onClick={() => setLiked({ ...liked, [index]: !liked[index] })}
-                    >
-                    {liked[index] ? "♥️" : "♡"}
-                    </span>
-                    <p className="font-sans">${product.price}</p>
-                </div>
-                <h3>
-                    {product.title.length > 18
-                    ? product.title.slice(0, 17) + "..."
-                    : product.title}
-                </h3>
-                </div>
-            </div>
-            ))}
+                {all.slice(0, visibleProducts).map((product, index) => {
+                    const imageSrc = importImage(product.image) || product.image;
+                
+                    return (
+                        <div
+                            key={index}
+                            className="relative p-3 w-full product font-bold group"
+                        >
+                            <div className="relative">
+                                <div className="best_img w-full h-full  flex justify-center items-center cursor-pointer relative group">
+                                    <img
+                                        src={imageSrc}
+                                        alt={product.title}
+                                        className="w-full h-[25rem] transform transition-transform duration-300 ease-in-out"
+                                    />
+                                    <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
+                                </div>
+                            </div>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <AddToCartButton item={product} />
+                                <button
+                                    className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
+                                    onClick={() => handleViewDetails(product)}
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                            <div className="mt-4">
+                                <div className="cursor-pointer flex justify-between mb-2">
+                                    <span
+                                        className="cursor-pointer text-2xl hover:scale-110 text-black"
+                                        onClick={() => setLiked({ ...liked, [index]: !liked[index] })}
+                                    >
+                                        {liked[index] ? "♥️" : "♡"}
+                                    </span>
+                                    <p className="font-sans">${product.price}</p>
+                                </div>
+                                <h3>
+                                    {product.title.length > 18
+                                        ? product.title.slice(0, 17) + "..."
+                                        : product.title}
+                                </h3>
+                            </div>
+                        </div>
+                    )
+                })}
         </div>
 
         {/* Show "Load More" button only if there are more products to show */}

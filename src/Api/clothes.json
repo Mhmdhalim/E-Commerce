@@ -1,0 +1,323 @@
+[
+    {
+        "id": "7",
+        "title": "Regular Fit Leather Jacket",
+        "price": 299,
+        "category": "men",
+        "type": "jacket",
+        "image": "https://i.imgur.com/bXsuM2T.jpeg",
+        "description": "A classic leather jacket with a regular fit, perfect for adding a touch of rugged style to any outfit. Crafted from high-quality leather for durability and comfort."
+    },
+    {
+        "id": "13",
+        "title": "Cotton Twill Jacket",
+        "price": 120,
+        "category": "kids",
+        "type": "jacket",
+        "image": "https://i.imgur.com/3zZ7yOi.jpeg",
+        "description": "A comfortable and durable cotton twill jacket for kids, offering a stylish yet practical layer for everyday wear. Features a classic design with functional pockets."
+    },
+    {
+        "id": "22",
+        "title": "Twill Chinos",
+        "price": 60,
+        "category": "kids",
+        "type": "pants",
+        "image": "https://i.imgur.com/XBDxFZR.jpeg",
+        "description": "Versatile twill chinos for kids, designed for both comfort and style. These chinos offer a clean look with a tailored fit, ideal for both casual and semi-formal occasions."
+    },
+    {
+        "id": "25",
+        "title": "Cotton Printed Shirt",
+        "price": 190,
+        "category": "women",
+        "type": "shirt",
+        "image": "https://i.imgur.com/JB1s62G.jpeg",
+        "description": "A chic cotton shirt for women featuring a vibrant print. The lightweight fabric ensures all-day comfort while the eye-catching design adds a touch of elegance to your wardrobe."
+    },
+    {
+        "id": "4",
+        "title": "Essential Green Cardigan",
+        "price": 350,
+        "category": "men",
+        "type": "jacket",
+        "image": "https://i.imgur.com/o6NVOgg.jpeg",
+        "description": "An essential green cardigan for men, offering a sophisticated and versatile layer. Made from high-quality fabric, it provides warmth and a refined style for any occasion."
+    },
+    {
+        "id": "16",
+        "title": "Cotton Polo Shirt",
+        "price": 65,
+        "category": "kids",
+        "type": "t-shirt",
+        "image": "https://i.imgur.com/khdgZxV.jpeg",
+        "description": "A classic cotton polo shirt for kids, combining comfort with a smart, sporty look. Ideal for casual outings or school wear, it features a soft fabric and a stylish collar."
+    },
+    {
+        "id": "12",
+        "title": "Slim Fit T-Shirt",
+        "price": 150,
+        "category": "men",
+        "type": "t-shirt",
+        "image": "https://i.imgur.com/QMqrnQH.jpeg",
+        "description": "A slim fit t-shirt for men that offers a modern, tailored silhouette. Made from high-quality fabric, it is both stylish and comfortable for everyday wear."
+    },
+    {
+        "id": "34",
+        "title": "Ruffle Spread Shirt",
+        "price": 350,
+        "category": "women",
+        "type": "shirt",
+        "image": "https://i.imgur.com/IfH7Lmc.jpeg",
+        "description": "An elegant ruffle spread shirt for women, featuring intricate ruffle details and a spread collar. The premium fabric adds a touch of sophistication to any outfit."
+    },
+    {
+        "id": "31",
+        "title": "Formal One-Piece Suit",
+        "price": 420,
+        "category": "women",
+        "type": "suit",
+        "image": "https://i.imgur.com/WchXhFp.jpeg",
+        "description": "A sophisticated formal one-piece suit for women, designed for high-impact occasions. Made from luxurious fabric, it provides a sleek, tailored fit and timeless style."
+    },
+    {
+        "id": "17",
+        "title": "Carpenter Joggers",
+        "price": 60,
+        "category": "kids",
+        "type": "pants",
+        "image": "https://i.imgur.com/V1IdlTl.jpeg",
+        "description": "Comfortable carpenter joggers for kids, featuring a relaxed fit with utility pockets. Perfect for active play and casual wear, they offer both style and practicality."
+    },
+    {
+        "id": "32",
+        "title": "Slim Fit Blocked Casual Shirt",
+        "price": 340,
+        "category": "women",
+        "type": "shirt",
+        "image": "https://i.imgur.com/y0D0KjN.jpeg",
+        "description": "A stylish slim fit blocked casual shirt for women, designed with bold color blocks and a sleek silhouette. Ideal for creating a modern, fashionable look."
+    },
+    {
+        "id": "10",
+        "title": "Slim Fit Flared Twill Pants",
+        "price": 220,
+        "category": "men",
+        "type": "pants",
+        "image": "https://i.imgur.com/wPWJAeH.jpeg",
+        "description": "Trendy slim fit flared twill pants for men, combining a slim silhouette with a flared leg. The high-quality twill fabric ensures both comfort and a contemporary style."
+    },
+    {
+        "id": "9",
+        "title": "Oversized Fit Cotton T-Shirt",
+        "price": 150,
+        "category": "men",
+        "type": "t-shirt",
+        "image": "https://i.imgur.com/4e8IB4l.jpeg",
+        "description": "An oversized fit cotton t-shirt for men, offering a relaxed and comfortable wear. Perfect for casual outings, it combines a laid-back style with breathable cotton fabric."
+    },
+    {
+        "id": "24",
+        "title": "Water-Repellent Puffer Jacket",
+        "price": 75,
+        "category": "kids",
+        "type": "jacket",
+        "image": "https://i.imgur.com/Mgyb0QU.jpeg",
+        "description": "A water-repellent puffer jacket for kids, designed to keep them warm and dry in wet weather. Features a lightweight, insulating material and a cozy fit."
+    },
+    {
+        "id": "18",
+        "title": "Denim Jacket",
+        "price": 75,
+        "category": "kids",
+        "type": "jacket",
+        "image": "https://i.imgur.com/FxJ1uqw.jpeg",
+        "description": "A classic denim jacket for kids, offering a timeless style with a durable, comfortable fit. Perfect for layering in various weather conditions."
+    },
+    {
+        "id": "35",
+        "title": "Linen-Blend Dress",
+        "price": 340,
+        "category": "women",
+        "type": "dress",
+        "image": "https://i.imgur.com/08SQtLQ.jpeg",
+        "description": "A light and breezy linen-blend dress for women, ideal for warm weather. The dress features a relaxed fit and a sophisticated design, perfect for both casual and formal occasions."
+    },
+    {
+        "id": "6",
+        "title": "Denim Jacket",
+        "price": 200,
+        "category": "men",
+        "type": "jacket",
+        "image": "https://i.imgur.com/uv1xNuK.jpeg",
+        "description": "A premium denim jacket for men, known for its rugged durability and classic style. The high-quality denim offers both comfort and a versatile look."
+    },
+    {
+        "id": "26",
+        "title": "V-neck Flared Sleeves Dress",
+        "price": 280,
+        "category": "women",
+        "type": "dress",
+        "image": "https://i.imgur.com/TRpKJyo.jpeg",
+        "description": "An elegant V-neck dress for women with flared sleeves, providing a flattering silhouette and a touch of femininity. Perfect for dressy occasions or stylish everyday wear."
+    },
+    {
+        "id": "19",
+        "title": "Biker Jacket",
+        "price": 75,
+        "category": "kids",
+        "type": "jacket",
+        "image": "https://i.imgur.com/XTh31lx.jpeg",
+        "description": "A cool biker jacket for kids, designed to give a trendy edge to their wardrobe. Made with durable materials and featuring classic biker details for a stylish look."
+    },
+    {
+        "id": "1",
+        "title": "Loose Jeans",
+        "price": 220,
+        "category": "men",
+        "type": "pants",
+        "image": "https://i.imgur.com/ie7SMU1.jpeg",
+        "description": "Comfortable loose jeans for men, offering a relaxed fit and casual style. Crafted from high-quality denim, these jeans provide both durability and a laid-back aesthetic."
+    },
+    {
+        "id": "33",
+        "title": "Eyelet Embroidered Shirt",
+        "price": 340,
+        "category": "women",
+        "type": "shirt",
+        "image": "https://i.imgur.com/kFmU42N.jpeg",
+        "description": "A beautifully designed eyelet embroidered shirt for women, featuring delicate embroidery and a chic silhouette. Ideal for adding a touch of elegance to any outfit."
+    },
+    {
+        "id": "20",
+        "title": "Cotton Jersey T-Shirt",
+        "price": 50,
+        "category": "kids",
+        "type": "t-shirt",
+        "image": "https://i.imgur.com/L0DVfIn.jpeg",
+        "description": "A soft cotton jersey t-shirt for kids, perfect for everyday wear. Its breathable fabric and comfortable fit make it an essential wardrobe staple for casual outings."
+    },
+    {
+        "id": "3",
+        "title": "Checkered Shirt",
+        "price": 220,
+        "category": "men",
+        "image": "https://i.imgur.com/eyLtkUS.jpeg",
+        "description": "A stylish checkered shirt for men, offering a versatile look that can be dressed up or down. The classic pattern and high-quality fabric make it a timeless addition to any wardrobe."
+    },
+    {
+        "id": "2",
+        "title": "Beige Zip-Up Coat",
+        "price": 300,
+        "category": "men",
+        "type": "jacket",
+        "image": "https://i.imgur.com/Fcdk42T.jpeg",
+        "description": "A sophisticated beige zip-up coat for men, combining modern style with functionality. The coat features a sleek design and high-quality materials, ideal for cooler weather."
+    },
+    {
+        "id": "11",
+        "title": "Casual Shirt",
+        "price": 199,
+        "category": "men",
+        "image": "https://i.imgur.com/MnfbUWb.jpeg",
+        "description": "A versatile casual shirt for men, perfect for a relaxed yet polished look. The shirt is made from comfortable fabric and features a classic design suitable for various occasions."
+    },
+    {
+        "id": "28",
+        "title": "Viscose Shirt Dress",
+        "price": 340,
+        "category": "women",
+        "type": "dress",
+        "image": "https://i.imgur.com/BZrcYg5.jpeg",
+        "description": "A stylish viscose shirt dress for women, combining the ease of a shirt with the elegance of a dress. Made from soft viscose fabric, it offers a flattering fit and sophisticated look."
+    },
+    {
+        "id": "5",
+        "title": "Urban Essentials SweatShirt",
+        "price": 200,
+        "category": "men",
+        "image": "https://i.imgur.com/5sPTsRn.jpeg",
+        "description": "A must-have urban essentials sweatshirt for men, offering comfort and style in equal measure. The high-quality fabric ensures durability, while the design provides a modern, casual look."
+    },
+    {
+        "id": "21",
+        "title": "Twill Jacket",
+        "price": 120,
+        "category": "kids",
+        "type": "jacket",
+        "image": "https://i.imgur.com/qi9dzqj.jpeg",
+        "description": "A stylish twill jacket for kids, featuring a durable fabric and classic design. Ideal for layering during cooler months, it combines functionality with a trendy look."
+    },
+    {
+        "id": "29",
+        "title": "Oversized Crinkled Dress",
+        "price": 340,
+        "category": "women",
+        "type": "dress",
+        "image": "https://i.imgur.com/REBV9eV.jpeg",
+        "description": "An elegant oversized crinkled dress for women, offering a relaxed fit with a chic, crinkled texture. Perfect for a sophisticated, effortless look on any occasion."
+    },
+    {
+        "id": "8",
+        "title": "Blue Jeans",
+        "price": 100,
+        "category": "men",
+        "type": "pants",
+        "image": "https://i.imgur.com/viHe1yx.jpeg",
+        "description": "Classic blue jeans for men, featuring a timeless design and comfortable fit. Made from durable denim, these jeans are versatile and suitable for a variety of casual outfits."
+    },
+    {
+        "id": "30",
+        "title": "Black Floral Chiffon Dress",
+        "price": 340,
+        "category": "women",
+        "type": "dress",
+        "image": "https://i.imgur.com/VIs516t.jpeg",
+        "description": "A sophisticated black floral chiffon dress for women, combining elegance with a touch of floral charm. The lightweight chiffon fabric adds a graceful flow and comfort."
+    },
+    {
+        "id": "27",
+        "title": "Twill Jacket",
+        "price": 120,
+        "category": "women",
+        "type": "jacket",
+        "image": "https://i.imgur.com/C5BKxQF.jpeg",
+        "description": "A chic twill jacket for women, designed for style and practicality. The durable fabric and classic cut make it a versatile piece for various occasions."
+    },
+    {
+        "id": "15",
+        "title": "Urban Essential T-Shirt",
+        "price": 50,
+        "category": "kids",
+        "type": "t-shirt",
+        "image": "https://i.imgur.com/kU54BWh.jpeg",
+        "description": "A basic yet stylish urban essential t-shirt for kids. Made from soft cotton, it provides all-day comfort and a casual look suitable for everyday wear."
+    },
+    {
+        "id": "23",
+        "title": "Joggers",
+        "price": 60,
+        "category": "kids",
+        "type": "pants",
+        "image": "https://i.imgur.com/OmDki15.jpeg",
+        "description": "Comfortable joggers for kids, featuring a relaxed fit and stretchy waistband. Ideal for active play or lounging, these joggers offer both style and functionality."
+    },
+    {
+        "id": "14",
+        "title": "Trousers",
+        "price": 75,
+        "category": "kids",
+        "type": "pants",
+        "image": "https://i.imgur.com/V2LGWj3.jpeg",
+        "description": "Stylish trousers for kids, offering a smart look with a comfortable fit. Made from durable fabric, these trousers are perfect for school or special occasions."
+    },
+    {
+        "id": "36",
+        "title": "Linen-Blend Shirt",
+        "price": 340,
+        "category": "women",
+        "type": "shirt",
+        "image": "https://i.imgur.com/t0BRgvw.jpeg",
+        "description": "A breezy linen-blend shirt for women, ideal for warm weather. The shirt combines linen's breathability with a chic design, offering both comfort and style."
+    }
+]

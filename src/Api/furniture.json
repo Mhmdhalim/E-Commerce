@@ -1,0 +1,187 @@
+[
+
+    {
+        "id": 1,
+        "title": "FRAXINUS",
+        "description": "Slim Console Table",
+        "image": "http://beatton-server.up.railway.app/public/products/zeroimg.jpg",
+        "price": 1299,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 3,
+        "title": "AGORA",
+        "description": "Mini Side Table",
+        "image": "http://beatton-server.up.railway.app/public/products/secondimg.jpg",
+        "price": 499,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 9,
+        "title": "SIMONE",
+        "description": "Marvel Side Table",
+        "image": "http://beatton-server.up.railway.app/public/products/eightimg.jpg",
+        "price": 899,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 4,
+        "title": "GRIFFO",
+        "description": "Barcalona Chair",
+        "image": "http://beatton-server.up.railway.app/public/products/thirdimg.jpg",
+        "price": 1599,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 5,
+        "title": "ARAMDO",
+        "description": "Block Media Console",
+        "image": "http://beatton-server.up.railway.app/public/products/fourthimg.jpg",
+        "price": 1699,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 6,
+        "title": "HELENA",
+        "description": "Round Coffee Table",
+        "image": "http://beatton-server.up.railway.app/public/products/fifthimg.jpg",
+        "price": 1299,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 7,
+        "title": "MUGGO",
+        "description": "Mini Side Table",
+        "image": "http://beatton-server.up.railway.app/public/products/sixthimg.jpg",
+        "price": 999,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 8,
+        "title": "LOLITO",
+        "description": "Round Coffee Table",
+        "image": "http://beatton-server.up.railway.app/public/products/seventhimg.jpg",
+        "price": 1199,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },
+    {
+        "id": 2,
+        "title": "SALIEVO",
+        "description": "Chalet Natural Sofa",
+        "image": "http://beatton-server.up.railway.app/public/products/firstimg.jpg",
+        "price": 3699,
+        "in_stock": 0,
+        "created_at": "2024-10-13T10:58:18.935Z",
+        "updated_at": "2024-10-13T10:58:50.623Z"
+    },{
+            "id": "blaise",
+            "title": "BLAISE series",
+            "image": "./assets/bedroom/blaise.jpg",
+            "price": 3299000,
+            "category": "bedroom"
+        },
+        {
+            "id": "kiki",
+            "title": "KIKI series",
+            "image": "./assets/bedroom/kiki.jpg",
+            "price": 2799000,
+            "category": "bedroom"
+        },
+        {
+            "id": "mentor",
+            "title": "MENTOR series",
+            "image": "./assets/bedroom/mentor.jpg",
+            "price": 4999000,
+            "category": "bedroom"
+        },
+        {
+            "id": "virtual",
+            "title": "VIRTUAL series",
+            "image": "./assets/bedroom/virtual.jpg",
+            "price": 5000000,
+            "category": "bedroom"
+        }
+        ,
+        
+        {
+            "id": "materia",
+            "title": "MATERIA series",
+            "image": "./assets/dining/materia.jpg",
+            "price": 2599000,
+            "category": "dining"
+        },
+        {
+            "id": "ondeo",
+            "title": "ONDEO series",
+            "image": "./assets/dining/ondeo.jpg",
+            "price": 5999000,
+            "category": "dining"
+        },
+        {
+            "id": "steedy",
+            "title": "STEEDY series",
+            "image": "./assets/dining/steedy.jpg",
+            "price": 4599000,
+            "category": "dining"
+        }
+        ,
+        {
+            "id": "aulani",
+            "title": "AULANI series",
+            "image": "./assets/living/aulani.jpg",
+            "price": 2599000,
+            "category": "living"
+        },
+        {
+            "id": "avante",
+            "title": "AVANTE series",
+            "image": "./assets/living/avante.jpg",
+            "price": 7499000,
+            "category": "living"
+        },
+        {
+            "id": "driftwood",
+            "title": "DRIFTWOOD series",
+            "image": "./assets/living/driftwood.jpg",
+            "price": 1299000,
+            "category": "living"
+        },
+        {
+            "id": "fashio",
+            "title": "FASHIO series",
+            "image": "./assets/living/fashio.jpg",
+            "price": 4599000,
+            "category": "living"
+        },
+        {
+            "id": "lintel",
+            "title": "LINTEL series",
+            "image": "./assets/living/lintel.jpg",
+            "price": 2999000,
+            "category": "living"
+        },
+        {
+            "id": "viva",
+            "title": "VIVA series",
+            "image": "./assets/living/viva.jpg",
+            "price": 3999000,
+            "category": "living"
+        }
+
+]

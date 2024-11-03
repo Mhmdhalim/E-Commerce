@@ -1,0 +1,136 @@
+[
+  {
+    "id": "16",
+    "title": "Cotton Polo Shirt",
+    "price": 65,
+    "category": "kids",
+    "type": "t-shirt",
+    "image": "https://i.imgur.com/khdgZxV.jpeg",
+    "description": "A classic cotton polo shirt for kids, combining comfort with a smart, sporty look. Ideal for casual outings or school wear, it features a soft fabric and a stylish collar."
+  },
+  {
+    "id": 2,
+    "title": "SALIEVO",
+    "description": "Chalet Natural Sofa",
+    "image": "http://beatton-server.up.railway.app/public/products/firstimg.jpg",
+    "price": 3699,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": "25",
+    "title": "Cotton Printed Shirt",
+    "price": 190,
+    "category": "women",
+    "type": "shirt",
+    "image": "https://i.imgur.com/JB1s62G.jpeg",
+    "description": "A chic cotton shirt for women featuring a vibrant print. The lightweight fabric ensures all-day comfort while the eye-catching design adds a touch of elegance to your wardrobe."
+  },
+  {
+    "id": 5,
+    "title": "ARAMDO",
+    "description": "Block Media Console",
+    "image": "http://beatton-server.up.railway.app/public/products/fourthimg.jpg",
+    "price": 1699,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": 4,
+    "title": "Essential Green Cardigan",
+    "price": 350,
+    "category": "men",
+    "type": "jacket",
+    "image": "https://i.imgur.com/o6NVOgg.jpeg",
+    "description": "An essential green cardigan for men, offering a sophisticated and versatile layer. Made from high-quality fabric, it provides warmth and a refined style for any occasion."
+  },
+  {
+    "id": 7,
+    "title": "Regular Fit Leather Jacket",
+    "price": 299,
+    "category": "men",
+    "type": "jacket",
+    "image": "https://i.imgur.com/bXsuM2T.jpeg",
+    "description": "A classic leather jacket with a regular fit, perfect for adding a touch of rugged style to any outfit. Crafted from high-quality leather for durability and comfort."
+  },
+  {
+    "id": 3,
+    "title": "AGORA",
+    "description": "Mini Side Table",
+    "image": "http://beatton-server.up.railway.app/public/products/secondimg.jpg",
+    "price": 499,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": 9,
+    "title": "SIMONE",
+    "description": "Marvel Side Table",
+    "image": "http://beatton-server.up.railway.app/public/products/eightimg.jpg",
+    "price": 899,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": 8,
+    "title": "LOLITO",
+    "description": "Round Coffee Table",
+    "image": "http://beatton-server.up.railway.app/public/products/seventhimg.jpg",
+    "price": 1199,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": 1,
+    "title": "FRAXINUS",
+    "description": "Slim Console Table",
+    "image": "http://beatton-server.up.railway.app/public/products/zeroimg.jpg",
+    "price": 1299,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": 6,
+    "title": "HELENA",
+    "description": "Round Coffee Table",
+    "image": "http://beatton-server.up.railway.app/public/products/fifthimg.jpg",
+    "price": 1299,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": "22",
+    "title": "Twill Chinos",
+    "price": 60,
+    "category": "kids",
+    "type": "pants",
+    "image": "https://i.imgur.com/XBDxFZR.jpeg",
+    "description": "Versatile twill chinos for kids, designed for both comfort and style. These chinos offer a clean look with a tailored fit, ideal for both casual and semi-formal occasions."
+  },
+  {
+    "id": 4,
+    "title": "GRIFFO",
+    "description": "Barcalona Chair",
+    "image": "http://beatton-server.up.railway.app/public/products/thirdimg.jpg",
+    "price": 1599,
+    "in_stock": 0,
+    "created_at": "2024-10-13T10:58:18.935Z",
+    "updated_at": "2024-10-13T10:58:50.623Z"
+  },
+  {
+    "id": "13",
+    "title": "Cotton Twill Jacket",
+    "price": 120,
+    "category": "kids",
+    "type": "jacket",
+    "image": "https://i.imgur.com/3zZ7yOi.jpeg",
+    "description": "A comfortable and durable cotton twill jacket for kids, offering a stylish yet practical layer for everyday wear. Features a classic design with functional pockets."
+  }
+]

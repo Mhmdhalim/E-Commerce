@@ -9,11 +9,12 @@ const Electronics = () => {
     return (
         <>
         <div className="flex flex-col gap-10 justify-center">
-            {/* NAVBAR */}
+            NAVBAR
             <div className="h-20 sm:mb-28 mb-5">
             <NavBar />
             </div>
-            <ProductList service={"electronics"} />
+                {/* <ProductList service={"electronics"} /> */}
+                <h1 className="flex justify-center items-center text-4xl font-bold mt-7">Out Of Stock...</h1>
             <Footer />
         </div>
         </>

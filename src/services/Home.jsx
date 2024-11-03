@@ -18,6 +18,7 @@ import img9 from "../assets/logo/img9.png"
 import homeVideo from "../assets/homeVideo.mp4";
 import AddToCartButton from "../FunctionOfProducts/AddToCartButton";
 
+import apicloths from "../Api/clothes.json"
 const Home = () => {
   const [all, setAll] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,8 +32,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        setAll(response.data);
+        setAll(apicloths);
       } catch (error) {
         setError("Failed to fetch products");
       } finally {
@@ -42,8 +42,10 @@ const Home = () => {
 
     fetchData();
   }, []);
-  console.log(all);
-  const handleHeartClick = (product, index) => {
+
+  console.log(Array.isArray(apicloths));
+
+  const handleHeartClick = (index) => {
     setLiked((prevLiked) => ({
       ...prevLiked,
       [index]: !prevLiked[index],
@@ -63,26 +65,40 @@ const Home = () => {
     });
   };
 
-  // HANDEL NEXT AND PREV BUTTONS
+  // // HANDEL NEXT AND PREV BUTTONS
+  // const nextSlide = () => {
+  //   setSlideDirection("right");
+  //   if (currentIndex < all.length - itemsPerSlide) {
+  //     setCurrentIndex(currentIndex + itemsPerSlide);
+  //   } else {
+  //     setCurrentIndex(0);
+  //   }
+  // };
+
+  // const prevSlide = () => {
+  //   setSlideDirection("left");
+  //   if (currentIndex > 0) {
+  //     setCurrentIndex(currentIndex - itemsPerSlide);
+  //   } else {
+  //     setCurrentIndex(all.length - itemsPerSlide);
+  //   }
+  // };
+  // Handle Next and Previous Buttons
   const nextSlide = () => {
     setSlideDirection("right");
-    if (currentIndex < all.length - itemsPerSlide) {
-      setCurrentIndex(currentIndex + itemsPerSlide);
-    } else {
-      setCurrentIndex(0);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex < all.length - itemsPerSlide ? prevIndex + itemsPerSlide : 0
+    );
   };
 
   const prevSlide = () => {
     setSlideDirection("left");
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - itemsPerSlide);
-    } else {
-      setCurrentIndex(all.length - itemsPerSlide);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - itemsPerSlide : all.length - itemsPerSlide
+    );
   };
 
-    <Status loading={loading} error={error} />;
+  <Status loading={loading} error={error} />;
 
   return (
     <>
@@ -91,10 +107,10 @@ const Home = () => {
           <NavBar bg={bg_status} home={"home"} />
         </header>
         <section className="first_text absolute sm:top-80 sm:left-20 top-56 left-8">
-          <p className="uppercase sm:text-4xl text-2xl font-extrabold text-white mb-4">
+          <p className="uppercase text-pretty sm:w-[500px] sm:text-4xl text-2xl font-extrabold text-white mb-4">
             Discover Innovation,
-            <br /> Elegance, and Style
-            <br /> Where Technology Meets <br /> Timeless Beauty.
+            Elegance, and Style
+            Where Technology Meets Timeless Beauty.
           </p>
           <Link to="/store" className="z-0">
             <button className="bg-white z-0 hover:bg-white text-black py-2 px-4 border-b-4 border-white-700 hover:border-white rounded-full">
@@ -115,7 +131,7 @@ const Home = () => {
 
       {/* Fixed Imgaes */}
       <div className="flex flex-wrap">
-        <div className="first_images flex justify-center p-0 items-center w-full overflow-hidden">
+        <div className="first_images flex justify-center p-5 items-center w-full overflow-hidden">
           <div className="big_screen w-full">
             <img className="" src={img1} alt="" />
             <img className="" src={img2} alt="" />
@@ -139,79 +155,68 @@ const Home = () => {
             Best Seller
           </h1>
           <div className="sm:p-10 best_seller_all flex flex-wrap flex-row  justify-center items-center gap-10">
-            {all
-              .filter((_, index) => index === 3 || index === 2 || index === 4)
-              .map((product, index) => (
-                <div
-                  key={index}
-                  className="font-bold p-5 product flex flex-col justify-between gap-4 group"
-                >
-                  <div className="relative">
-                    <div className="best_img h-96 flex justify-center w-full items-center cursor-pointer relative  group">
-                      <img
-                        src={product.image}
-                        alt="Your Alt Text"
-                        className="w-full h-full transform transition-transform duration-300 ease-in-out"
-                      />
-                      <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                    <AddToCartButton item={product} />
-                    <button
-                      className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
-                      onClick={(e) => handleViewDetails(product)}
-                    >
-                      View Details
-                    </button>
-                  </div>
-                  <div>
-                    <div className="cursor-pointer flex justify-between mb-2">
-                      <span
-                        onClick={() => handleHeartClick(product, index)}
-                        className="cursor-pointer text-2xl hover:scale-110 text-black"
-                      >
-                        {liked[index] ? "♥️" : "♡"}
-                      </span>
-                      <p className="font-sans">${product.price}</p>
-                    </div>
-                    <h3>
-                      {product.title.length > 18
-                        ? product.title.slice(0, 17) + "..."
-                        : product.title}
-                    </h3>
+            {all.slice(9, 15).map((product, index) => (
+              <div
+                key={index}
+                className="font-bold p-5 product flex flex-col justify-between gap-4 group"
+              >
+                <div className="relative">
+                  <div className="best_img h-[25rem] flex justify-center w-full  items-center cursor-pointer relative  group">
+                    <img
+                      src={product.image}
+                      alt="Your Alt Text"
+                      className="w-full h-full transform transition-transform duration-300 ease-in-out"
+                    />
+                    <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                   </div>
                 </div>
-              ))}
+                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                  <AddToCartButton item={product} />
+                  <button
+                    className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
+                    onClick={(e) => handleViewDetails(product)}
+                  >
+                    View Details
+                  </button>
+                </div>
+                <div>
+                  <div className="cursor-pointer flex justify-between mb-2">
+                    <h3>
+                    {product.title.length > 18
+                      ? product.title.slice(0, 17) + "..."
+                      : product.title}
+                  </h3>
+                    <p className="font-sans">${product.price}</p>
+                  </div>
+                  
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         {/* VIDEO */}
-        <div className="bg-white w-full p-1 flex justify-center items-center align-middle relative z-0 overflow-hidden">
+        <div className="bg-white w-full p-5 flex justify-center items-center align-middle relative z-0 overflow-hidden">
           <video loop autoPlay muted src={homeVideo}></video>
-          <div className="flex flex-col p-5 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
-            <div className="lg:text-xl sm:w-[500px] lg:w-[500px] mb-0 lg:mb-6">
-              <span className="w-full lg:text-4xl text-xl font-bold my-0 lg:my-5">
+          <div className="flex flex-col p-10 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
+            <div className="lg:text-3xl sm:w-[500px] lg:w-[700px] items-center justify-center  ">
+              <span className="w-full lg:text-4xl text-xl font-extrabold my-0 lg:my-4">
                 Mousa Exclusive Collection
               </span>
               <br />
-              <p className="sm:inline-block hidden">
-                Step into a realm of unparalleled style and sophistication with
-                Mousa. Curate your perfect wardrobe with our exquisite selection
-                of clothing, cutting-edge electronics, and stunning jewelry.
-                Experience the perfect blend of luxury and modernity. Discover
-                your unique look today!
+              <p className="sm:inline-block hidden text-justify leading-relaxed md:text-sm my-10 w-[600px]" style={{textWrap: "pretty" }}>
+               Mousa invites you to explore a sanctuary of elegance, where sophistication meets unparalleled craftsmanship. Our curated collection is a tribute to those who live life with refined taste—those who seek more than mere fashion but an expression of identity and elegance. Discover a wardrobe that redefines luxury through intricate designs, sumptuous fabrics, and impeccable tailoring. Each piece of clothing, each electronic marvel, and every piece of jewelry in our collection is chosen for its ability to inspire, to empower, and to transform. Mousa is more than a store; it’s a journey through style and artistry, offering items that seamlessly blend modern innovation with timeless allure. Let each item be a part of your story, a testament to your individuality, and an embodiment of true sophistication. Embrace the Mousa experience and elevate your lifestyle with pieces that speak to the essence of who you are.
               </p>
             </div>
             <Link to="/store" className="z-0">
-              <button class="bg-white  hover:bg-white text-[#c3c35d] lg:text-xl text-[10px] lg:py-3 lg:px-4 py-1 px-2 lg:border-b-4 lg:border-white-700 hover:border-white rounded-full">
-                Shop Now
+              <button class="text-[10px] bg-white hover:bg-white text-[#c3c35d] lg:text-xl lg:py-2 lg:px-3 py-1 px-2 border-none rounded-full">
+                Shop
               </button>
             </Link>
           </div>
         </div>
         {/* MORE PRODUCTS */}
         <div className="best_seller w-full relative pb-10">
-          <h1 className="head_best_seller uppercase sm:text-4xl text-2xl font-extrabold text-center mb-10">
+          <h1 className="head_best_seller uppercase sm:text-4xl text-2xl font-extrabold text-left mb-10">
             You may also like
           </h1>
           <div className="carousel-container relative flex justify-center items-center">
@@ -220,6 +225,7 @@ const Home = () => {
               onClick={prevSlide}
               className="p-2 bg-black text-white rounded-full hover:bg-gray-800"
             >
+              {/* &larr; */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -237,7 +243,7 @@ const Home = () => {
             </button>
 
             {/* Products Display */}
-            <div className="product-list w-full flex justify-center items-center gap-10 p-4">
+            <div className="product-list w-full flex justify-center items-center  p-2">
               {all
                 .slice(
                   currentIndex,
@@ -253,7 +259,7 @@ const Home = () => {
                     } font-bold p-5 w-full lg:w-1/3 flex flex-col justify-between gap-4 group`}
                   >
                     <div className="relative">
-                      <div className="best_img h-96 p-10 flex justify-center items-center cursor-pointer relative  group">
+                      <div className="best_img h-[25rem] p-3 flex justify-center items-center cursor-pointer relative  group">
                         <img
                           src={product.image}
                           alt="Your Alt Text"
@@ -272,20 +278,15 @@ const Home = () => {
                       </button>
                     </div>
                     <div>
-                      <div className="cursor-pointer flex justify-between mb-2">
-                        <span
-                          onClick={() => handleHeartClick(product, index)}
-                          className="cursor-pointer text-2xl hover:scale-110 text-black"
-                        >
-                          {liked[index] ? "♥️" : "♡"}
-                        </span>
-                        <p className="font-sans">${product.price}</p>
-                      </div>
-                      <h3>
+                      <div className="cursor-pointer flex justify-evenly sm:justify-around mb-2">
+                        <h3 className="">
                         {product.title.length > 18
                           ? product.title.slice(0, 17) + "..."
                           : product.title}
                       </h3>
+                        <p className="font-sans">${product.price}</p>
+                      </div>
+                      
                     </div>
                   </div>
                 ))}
