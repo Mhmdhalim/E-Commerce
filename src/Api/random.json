@@ -132,5 +132,12 @@
     "type": "jacket",
     "image": "https://i.imgur.com/3zZ7yOi.jpeg",
     "description": "A comfortable and durable cotton twill jacket for kids, offering a stylish yet practical layer for everyday wear. Features a classic design with functional pockets."
+  },{
+    "id": "3",
+    "title": "Checkered Shirt",
+    "price": 220,
+    "category": "men",
+    "image": "https://i.imgur.com/eyLtkUS.jpeg",
+    "description": "A stylish checkered shirt for men, offering a versatile look that can be dressed up or down. The classic pattern and high-quality fabric make it a timeless addition to any wardrobe."
   }
 ]

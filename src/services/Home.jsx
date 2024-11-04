@@ -18,7 +18,7 @@ import img9 from "../assets/logo/img9.png"
 import homeVideo from "../assets/homeVideo.mp4";
 import AddToCartButton from "../FunctionOfProducts/AddToCartButton";
 
-import apicloths from "../Api/clothes.json"
+import apirandom from "../Api/random.json"
 const Home = () => {
   const [all, setAll] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setAll(apicloths);
+        setAll(apirandom);
       } catch (error) {
         setError("Failed to fetch products");
       } finally {
@@ -155,7 +155,7 @@ const Home = () => {
             Best Seller
           </h1>
           <div className="sm:p-10 best_seller_all flex flex-wrap flex-row  justify-center items-center gap-10">
-            {all.slice(9, 15).map((product, index) => (
+            {all.slice(2, 8).map((product, index) => (
               <div
                 key={index}
                 className="font-bold p-5 product flex flex-col justify-between gap-4 group"
