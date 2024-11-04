@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 import NavBar from "../PartsOfPage/navBar";
 import Footer from "../PartsOfPage/Footer";
@@ -23,7 +23,7 @@ const Home = () => {
   const [all, setAll] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [liked, setLiked] = useState(false);
+  // const [liked, setLiked] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
   const bg_status = false;
@@ -43,14 +43,14 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log(Array.isArray(apicloths));
+  // console.log(Array.isArray(apicloths));
 
-  const handleHeartClick = (index) => {
-    setLiked((prevLiked) => ({
-      ...prevLiked,
-      [index]: !prevLiked[index],
-    }));
-  };
+  // const handleHeartClick = (index) => {
+  //   setLiked((prevLiked) => ({
+  //     ...prevLiked,
+  //     [index]: !prevLiked[index],
+  //   }));
+  // };
 
   const navigate = useNavigate();
 
