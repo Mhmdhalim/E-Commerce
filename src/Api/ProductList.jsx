@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios for API call
 
@@ -19,34 +19,29 @@ const ProductList = (props) => {
   const [visibleProducts, setVisibleProducts] = useState(4); // State to control number of visible products
 
   // API call function
-    const fetchProducts = async () => {
+    const fetchProducts = useCallback(async () => {
         try {
-            if(props.service === 'furniture')
-            {
-                setAll(apifurniture)
-            }
-            else if (props.service === 'men' || props.service === 'women'){
-                setAll(apicloths)
-            }
-            else if (props.service === 'shop')
-            {
-                setAll(apirandom)
-            }
-            else {
-                const response = await axios.get( "https://fakestoreapi.com/products");
+            setLoading(true);
+            if (props.service === 'furniture') {
+                setAll(apifurniture);
+            } else if (props.service === 'men' || props.service === 'women') {
+                setAll(apicloths);
+            } else if (props.service === 'shop') {
+                setAll(apirandom);
+            } else {
+                const response = await axios.get("https://fakestoreapi.com/products");
                 setAll(response.data); // Set the fetched data to all products
             }
-        
         } catch (error) {
-        setError("Failed to fetch products"); // Handle errors
+            setError("Failed to fetch products"); // Handle errors
         } finally {
-        setLoading(false); // Stop loading once data is fetched
+            setLoading(false); // Stop loading once data is fetched
         }
-    };
+    }, [props.service]); // Only recreate `fetchProducts` if `props.service` changes
 
     useEffect(() => {
-        fetchProducts(); // Fetch products on component mount
-    }, []);
+        fetchProducts(); // Fetch products on component mount and when `props.service` changes
+    }, [fetchProducts]);
 
     // Helper function to dynamically import images
     const importImage = (path) => {
