@@ -22,7 +22,7 @@ const Footer = () => {
                 <footer className='flex justify-between flex-wrap items-start sm:gap-20 gap-5 p-8 px-6 w-full mb-8'>
                     <div className='flex flex-col sm:gap-4 gap-2'>
                         <h1 className='font-bold text-lg text-gray-800 '>Mosua</h1>
-                        <p className='sm:text-lg text-[14px] w-64'>Style, innovation, and elegance – all in one place. Discover the latest trends, cutting-edge tech, and timeless treasures at Mousa.</p>
+                        <p className='sm:text-lg text-[14px] w-64 text-justify text-pretty'>Style, innovation, and elegance – all in one place. Discover the latest trends, cutting-edge tech, and timeless treasures at Mousa.</p>
                     </div>
                     <div className='flex flex-col sm:gap-5 gap-2'>
                         <h1 className='font-bold text-lg text-gray-800 uppercase'>navigation</h1>
@@ -39,7 +39,7 @@ const Footer = () => {
                         <Link to="/Furniture">Furniture</Link>
                     </div>
                     <div className='flex flex-col sm:gap-5 gap-2'>
-                        <h1 className='font-bold text-lg text-gray-800 uppercase'>social</h1>
+                        <h1 className='font-bold text-lg text-gray-800 uppercase pl-4'>social</h1>
                         <div className="flex justify-center items-center gap-3">
                             {/* Facebook Icon */}
                             <a href="/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-600">

@@ -731,6 +731,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1208,6 +1212,18 @@ video {
 
 .pr-0 {
   padding-right: 0px;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-left {
