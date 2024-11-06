@@ -195,20 +195,21 @@ const Home = () => {
           </div>
         </div>
         {/* VIDEO */}
-        <div className="bg-white w-full p-5 flex justify-center items-center align-middle relative z-0 overflow-hidden">
+        <div className="bg-white w-full sm:p-5 flex justify-center items-center align-middle relative z-0 overflow-hidden">
           <video loop autoPlay muted src={homeVideo}></video>
           <div className="flex flex-col p-10 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
-            <div className="lg:text-3xl sm:w-[500px] lg:w-[700px] items-center justify-center  ">
-              <span className="w-full lg:text-4xl text-xl font-extrabold my-0 lg:my-4">
+            <div className="lg:text-3xl sm:w-[500px] lg:w-[1200px] items-center justify-center  ">
+              <span className="text-center sm:text-left w-full lg:text-4xl text-xl font-extrabold my-0 lg:my-4">
                 Mousa Exclusive Collection
               </span>
               <br />
-              <p className="sm:inline-block hidden text-justify leading-relaxed md:text-sm my-10 w-[600px]" style={{textWrap: "pretty" }}>
-               Mousa invites you to explore a sanctuary of elegance, where sophistication meets unparalleled craftsmanship. Our curated collection is a tribute to those who live life with refined taste—those who seek more than mere fashion but an expression of identity and elegance. Discover a wardrobe that redefines luxury through intricate designs, sumptuous fabrics, and impeccable tailoring. Each piece of clothing, each electronic marvel, and every piece of jewelry in our collection is chosen for its ability to inspire, to empower, and to transform. Mousa is more than a store; it’s a journey through style and artistry, offering items that seamlessly blend modern innovation with timeless allure. Let each item be a part of your story, a testament to your individuality, and an embodiment of true sophistication. Embrace the Mousa experience and elevate your lifestyle with pieces that speak to the essence of who you are.
+              <p className="sm:inline-block hidden text-sm text-justify leading-relaxed md:text-sm my-10 lg:text-xl w-full" style={{textWrap: "pretty" }}>
+                Mousa invites you to explore a sanctuary of elegance, where sophistication meets unparalleled craftsmanship. Our curated collection is a tribute to those who live life with refined taste—those who seek more than mere fashion but an expression of identity and elegance. Discover a wardrobe that redefines luxury through intricate designs, sumptuous fabrics, and impeccable tailoring. Each piece of clothing, each electronic marvel, and every piece of jewelry in our collection is chosen for its ability to inspire, to empower, and to transform. Mousa is more than a store; it’s a journey through style and artistry, offering items that seamlessly blend modern innovation with timeless allure. Let each item be a part of your story, a testament to your individuality, and an embodiment of true sophistication. Embrace the Mousa experience and elevate your lifestyle with pieces that speak to the essence of who you are.
               </p>
+              <p className="text-[10px] text-center sm:hidden">Mousa invites you to explore a sanctuary of elegance, where sophistication meets unparalleled craftsmanship. Our curated collection is a tribute to those who live life with refined taste—those who seek more than mere fashion but an expression of identity and elegance. </p>
             </div>
-            <Link to="/store" className="z-0">
-              <button class="text-[10px] bg-white hover:bg-white text-[#c3c35d] lg:text-xl lg:py-2 lg:px-3 py-1 px-2 border-none rounded-full">
+            <Link to="/store" className="z-0 text-center sm:text-left">
+              <button class=" text-[10px] bg-white hover:bg-white text-[#c3c35d] lg:text-xl lg:py-2 lg:px-3 py-1 px-2 border-none rounded-full">
                 Shop
               </button>
             </Link>

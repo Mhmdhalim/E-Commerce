@@ -73,7 +73,7 @@
     {
         "id": 8,
         "title": "LOLITO",
-        "description": "Round Coffee Table",
+        "description": "A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
         "image": "http://beatton-server.up.railway.app/public/products/seventhimg.jpg",
         "price": 1199,
         "in_stock": 0,
@@ -83,15 +83,17 @@
     {
         "id": 2,
         "title": "SALIEVO",
-        "description": "Chalet Natural Sofa",
+        "description": "A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
         "image": "http://beatton-server.up.railway.app/public/products/firstimg.jpg",
         "price": 3699,
         "in_stock": 0,
         "created_at": "2024-10-13T10:58:18.935Z",
         "updated_at": "2024-10-13T10:58:50.623Z"
-    },{
+    },
+    {
             "id": "blaise",
             "title": "BLAISE series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/bedroom/blaise.jpg",
             "price": 3299000,
             "category": "bedroom"
@@ -99,6 +101,7 @@
         {
             "id": "kiki",
             "title": "KIKI series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/bedroom/kiki.jpg",
             "price": 2799000,
             "category": "bedroom"
@@ -106,6 +109,7 @@
         {
             "id": "mentor",
             "title": "MENTOR series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/bedroom/mentor.jpg",
             "price": 4999000,
             "category": "bedroom"
@@ -113,6 +117,7 @@
         {
             "id": "virtual",
             "title": "VIRTUAL series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/bedroom/virtual.jpg",
             "price": 5000000,
             "category": "bedroom"
@@ -122,6 +127,7 @@
         {
             "id": "materia",
             "title": "MATERIA series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/dining/materia.jpg",
             "price": 2599000,
             "category": "dining"
@@ -129,6 +135,8 @@
         {
             "id": "ondeo",
             "title": "ONDEO series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+        
             "image": "./assets/dining/ondeo.jpg",
             "price": 5999000,
             "category": "dining"
@@ -136,6 +144,8 @@
         {
             "id": "steedy",
             "title": "STEEDY series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+
             "image": "./assets/dining/steedy.jpg",
             "price": 4599000,
             "category": "dining"
@@ -144,6 +154,7 @@
         {
             "id": "aulani",
             "title": "AULANI series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/living/aulani.jpg",
             "price": 2599000,
             "category": "living"
@@ -151,6 +162,8 @@
         {
             "id": "avante",
             "title": "AVANTE series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+
             "image": "./assets/living/avante.jpg",
             "price": 7499000,
             "category": "living"
@@ -158,6 +171,8 @@
         {
             "id": "driftwood",
             "title": "DRIFTWOOD series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+
             "image": "./assets/living/driftwood.jpg",
             "price": 1299000,
             "category": "living"
@@ -165,6 +180,8 @@
         {
             "id": "fashio",
             "title": "FASHIO series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+
             "image": "./assets/living/fashio.jpg",
             "price": 4599000,
             "category": "living"
@@ -172,6 +189,8 @@
         {
             "id": "lintel",
             "title": "LINTEL series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
+
             "image": "./assets/living/lintel.jpg",
             "price": 2999000,
             "category": "living"
@@ -179,6 +198,7 @@
         {
             "id": "viva",
             "title": "VIVA series",
+            "description":"A beautifully crafted walnut table that adds warmth and elegance to any dining space. Perfect for both intimate dinners and lively gatherings",
             "image": "./assets/living/viva.jpg",
             "price": 3999000,
             "category": "living"

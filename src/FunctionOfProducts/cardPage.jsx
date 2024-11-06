@@ -22,20 +22,19 @@ const CardPage = () => {
             title,
             description,
             price,
-            total: price * count,
-            count
+            total: price * (count || 1),
+            count: count || 1
         };
         addToCart(item);
 
-        // Set the notification message and visibility
         setNotification(`Added to cart 😂😉`);
         setIsVisible(true);
 
-        // Hide the notification after 3 seconds
         setTimeout(() => {
             setIsVisible(false);
         }, 3000);
     };
+
 
     return (
         <>
@@ -54,20 +53,21 @@ const CardPage = () => {
 
                 <div className='p-10 w-full flex sm:flex-row flex-col gap-6 items-center'>
                     <div className=''>
-                        <img src={img} alt="" className='' />
+                        <img src={img} alt="" className='sm:w-[25rem]' />
                     </div>
                     <div className='flex flex-col justify-center items-start gap-4'>
                         <h1 className='text-4xl font-extrabold'>{title}</h1>
                         <p className='text-xl font-bold'>${price}</p>
-                        <p className='font-semibold'>{description}</p>
+                        <p className='font-semibold sm:w-[50%]'>{description}</p>
                         <div className="flex items-center justify-start gap-5">
                             <input 
                                 type="number" 
                                 value={count} 
-                                onChange={(e) => setCount(Math.max(1, e.target.value))} 
-                                className="p-2 text-center border border-grey w-14 rounded" 
+                                onChange={(e) => setCount(e.target.value ? parseInt(e.target.value) : '')} 
+                                className="p-2 text-center border border-grey w-14 sm:w-16 min-w-0 text-sm sm:text-base rounded" 
                                 min="1" 
                             />
+
                             <button onClick={add_cart} className="bg-black hover:opacity-90 text-white font-bold py-2 px-4 rounded">
                                 Add to Cart
                             </button>
