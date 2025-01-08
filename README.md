@@ -22,7 +22,7 @@ Welcome to the **Mousa E-commerce Store**, an interactive and stylish online sho
 
 ## Demo
 
-![App Demo](https://m-ecommercee.netlify.app)
+![App Demo](https://bigcommercee.netlify.app/)
 
 ## Installation
 
