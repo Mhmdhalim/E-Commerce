@@ -1,4 +1,4 @@
-# Mousa E-commerce Store
+# E-commerce Store
 
 Welcome to the **Mousa E-commerce Store**, an interactive and stylish online shopping platform built with React! This project allows users to explore and purchase a curated selection of items across various categories, including **clothes for men and women, furniture, and electronics**.
 
